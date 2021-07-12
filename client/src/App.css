@@ -30,3 +30,13 @@ button {
     font-size: 25px;
     margin: 30px auto;
 }
+
+.btn {
+     width: 150px;
+     height: 25px;
+     font-size: 15px;
+}
+
+.upd {
+    font-size: 15px;
+}
