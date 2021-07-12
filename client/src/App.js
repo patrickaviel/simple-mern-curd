@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Axios from 'axios';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [foodName, setFoodName] = useState("");
+    const [days, setDays] = useState(0);
+
+    const addToList = () => {
+        alert(foodName);
+    };
+
+    return (
+        <div className="App">
+            <h1>CRUD App with MERN</h1>
+
+            <label htmlFor="food">Food Name:</label>
+            <input type="text" name="food" onChange={(e)=>{setFoodName(e.target.value)}} />
+            <label htmlFor="days">Days Since You Ate It:</label>
+            <input type="number" name="days" onChange={(e)=>{setDays(e.target.value)}}/>
+            <button onClick={addToList}>Add to List</button>
+        </div>
+    );
 }
 
 export default App;

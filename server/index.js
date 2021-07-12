@@ -11,7 +11,7 @@ mongoose.connect("mongodb+srv://admin:admin@crud.ytqnu.mongodb.net/food?retryWri
 });
 
 app.get("/", async (req,res)=>{
-    const food = new FoodModel({foodName:"Orange", daysSinceIAte:5});
+    const food = new FoodModel({foodName:"Grapes", daysSinceIAte:5});
 
     try{
         await food.save();
